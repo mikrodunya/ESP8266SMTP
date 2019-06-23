@@ -119,6 +119,7 @@ bool ESP8266SMTPHelper::Send(const String &to, const String &message)
 	}
 
 	WiFiClientSecure client;
+	client.setInsecure();
 
 #if defined(GS_SERIAL_LOG_LEVEL_2)
 	Serial.print(F("Connecting to: "));
